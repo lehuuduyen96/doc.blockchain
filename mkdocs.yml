@@ -1,7 +1,5 @@
-site_name: My Docs
-pages:
-  - Giới thiệu: index.md
-  - Cấu trúc: architecture.md
-  - Cài đặt: install.md
-  - First Project: first-project.md
+site_name: MkLorum
+nav:
+    - Giới thiệu: index.md
+    - About: about.md
 theme: readthedocs
