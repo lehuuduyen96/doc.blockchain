@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Cấu trúc - My Docs</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "C\u1ea5u tr\u00fac";
+    var mkdocs_page_input_path = "architecture.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> My Docs</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">Giới thiệu</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">Cấu trúc</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#kien-truc-cua-hyperledger">Kiến trúc của Hyperledger</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#membership-services-provider-msp">Membership Services Provider (MSP)</a></li>
+        
+            <li><a class="toctree-l3" href="#chaincode">Chaincode</a></li>
+        
+            <li><a class="toctree-l3" href="#blockchain-services">Blockchain Services</a></li>
+        
+            <li><a class="toctree-l3" href="#transactions">Transactions</a></li>
+        
+            <li><a class="toctree-l3" href="#node-va-channel">Node và channel</a></li>
+        
+        </ul>
+    
+
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../install/">Cài đặt</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../first-project/">First Project</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">My Docs</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Cấu trúc</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="kien-truc-cua-hyperledger">Kiến trúc của Hyperledger</h1>
+<p><img alt="Kiến trúc của Hyperledger" src="../images/architecture.jpg" /></p>
+<h2 id="membership-services-provider-msp">Membership Services Provider (MSP)</h2>
+<p>Cung cấp các dịch vụ quản lý danh tính, quyền riêng tư, bảo mật và kiểm toán trên mạng. Membership service có nhiệm vụ quản lý các user đăng ký vào channel, chỉ có user đã được chấp thuận mới có thể truy cập vào mạng.</p>
+<p>1 Hyperledger Fabric blockchain network có thể được quản lý bởi 1 hoặc nhiều MSP, phân ra thành <strong>Channel MSP</strong> và <strong>Local MSP</strong>.
+Channel MSP nắm giữ chứng chỉ định danh cho toàn bộ các node tham gia vào Channel, trong khi Local MSP nắm giữ chứng chỉ định danh cho user thuộc về 1 node duy nhất.</p>
+<p>Mỗi MSP nên có 1 tên định danh riêng để có thể tham chiếu vào mạng ( ví dụ <em>msp1</em>, <em>org2</em>, và <em>org3.divA</em>).</p>
+<p>Có thể hiểu 1 MSP nắm giữ danh sách các user hợp lệ trong mạng đó, nó nắm giữ 1 "Chứng chỉ định danh" (Certificate Authority) cho các thành viên trong mạng lưới. Tuy nhiên trên thực tế, chỉ có chứng chỉ của Administrator là được cấu hình trên MSP, các thành viên còn lại sẽ được xác thực theo thuật toán <strong>standard x509 PKI validation</strong>, trong khi Administrator được xác thực theo thuật toán so khớp byte-to-byte (<strong>byte-to-byte comparision</strong>)</p>
+<h2 id="chaincode">Chaincode</h2>
+<p>Hyperledger lưu các smartcontract dưới dạng các chaincode (ngôn ngữ lập trình để phát triển smartcontract), chaincode được sử dụng trong Hyperledger là Golang, Nodejs và Java. Có thể hiểu chaincode là một decentralize application, chạy trên các nút xác nhận hợp lệ và sử dụng được đóng gói trong các docker.</p>
+<p>Chaincode có nhiệm vụ thực thi các logic code nhằm truy vấn hoặc cập nhật trạng thái của sổ cái. Trong Hypeldger Fabric, chaincode là "smart contract" chạy trên các peers và tạo ra các transactions trên sổ cái chia sẻ của mạng Hyperledger Fabric (Hyperledger Fabric network's shared  ledger), cập nhật trạng thái của asset trong mạng.</p>
+<p>Lập trình viên dùng chaincode để viết các logic code, định nghĩa asset và quản lý chung các ứng dụng phi tập trung. Các ứng dụng này tương tác với sổ cái thông qua chaincode, vì vậy, chaincode phải được cài đặt trên toàn bộ các peer của channel.</p>
+<p><img alt="Vòng đời của 1 giao dịch trong Hyperledger Fabric" src="../images/transaction-flow.gif" /></p>
+<h2 id="blockchain-services">Blockchain Services</h2>
+<p>Các dịch vụ Blockchain bao gồm ba thành phần chính: giao thức peer-to-peer (P2P) dựa trên HTTP / 2, sổ kế toán phân phối và trình quản lý đồng thuận.</p>
+<h2 id="transactions">Transactions</h2>
+<p>Các giao dịch được thực hiện và lưu trữ trên Blockchain.</p>
+<h2 id="node-va-channel">Node và channel</h2>
+<h3 id="node">Node</h3>
+<p><img alt="Node và channel" src="../images/node.png" /></p>
+<p>Các node trong Hyperledger tương tác với nhau thông qua mạng, mỗi node có certificate riêng để định danh node đó. Người dùng cũng tương tác với node thông qua application, sử dụng định danh riêng của mình để thực hiện việc tương tác này.</p>
+<p>Các node trong Hyperledger là không ngang hàng. Có 3 loại node chính trong hệ thống, bao gồm:</p>
+<ul>
+<li>Client Nodes: Người dùng sử dụng để tạo ra giao dịch (transaction -txn)</li>
+<li>Peers: dùng để giữ cho dữ liệu đồng bộ trong toàn bộ hệ thống (do các node không ngang hàng nên cần có peers)</li>
+<li>Orderers: dùng để thực thi, phân phối các giao dịch trong hệ thống.</li>
+</ul>
+<p><img alt="Node và channel" src="../images/node2.png" /></p>
+<h3 id="channel">Channel</h3>
+<ul>
+<li>Peers kết nối đến channel</li>
+<li>Mỗi channel/nhánh trong Hyperledger Blockchain network sẽ có một sổ cái lưu trữ dữ liệu riêng.</li>
+</ul>
+<p><img alt="Node và Channel" src="../images/channel.png" /></p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../install/" class="btn btn-neutral float-right" title="Cài đặt">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href=".." class="btn btn-neutral" title="Giới thiệu"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href=".." style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../install/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+
+</body>
+</html>

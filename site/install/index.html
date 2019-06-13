@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Cài đặt - My Docs</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "C\u00e0i \u0111\u1eb7t";
+    var mkdocs_page_input_path = "install.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> My Docs</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">Giới thiệu</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../architecture/">Cấu trúc</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">Cài đặt</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#cai-at-hyperledger-fabric">Cài đặt Hyperledger Fabric</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#yeu-cau-he-thong">Yêu cầu hệ thống</a></li>
+        
+        </ul>
+    
+
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../first-project/">First Project</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">My Docs</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Cài đặt</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="cai-at-hyperledger-fabric">Cài đặt Hyperledger Fabric</h1>
+<p>Bạn có thể xem hướng dẫn gốc <a href="https://developer.ibm.com/tutorials/ibm-blockchain-platform-vscode-smart-contract/">tại đây</a></p>
+<h2 id="yeu-cau-he-thong">Yêu cầu hệ thống</h2>
+<p>Để cài đặt môi trường phát triển Hyperledger Fabric, cần có các thành phần sau:</p>
+<ul>
+<li><a href="https://nodejs.org/en/download/">Node v8.x or greater and npm v5.x or greater</a></li>
+<li><a href="http://yeoman.io/">Yeoman (yo) v2.x</a></li>
+<li><a href="https://www.docker.com/get-started">Docker version v17.06.2-ce or greater</a></li>
+<li><a href="https://docs.docker.com/compose/install/">Docker Compose v1.14.0 or greater</a></li>
+<li><a href="https://code.visualstudio.com/download">VSCode 1.28.2 or higher</a></li>
+</ul>
+<p>Đối với Windows:</p>
+<ul>
+<li>Windows 10 Enterprise, Pro, or Education with 1607 Anniversary Update or later</li>
+<li>Docker for Windows chạy Linux containers (đây là thiết lập mặc định)</li>
+<li>C++ Build Tools for Windows from <a href="https://github.com/felixrieseberg/windows-build-tools#windows-build-tools">windows-build-tools</a></li>
+<li>OpenSSL v1.0.2 from <a href="http://slproweb.com/products/Win32OpenSSL.html">Win32 OpenSSL</a><ul>
+<li>Cài đặt version bình thường, không phải "light" version</li>
+<li>Cài đặt Win32 version vào C:\OpenSSL-Win32 trên máy 32-bit</li>
+<li>Cài đặt Win64 version vào C:\OpenSSL-Win64 trên máy 64-bit</li>
+</ul>
+</li>
+</ul>
+<p>Sau khi cài đặt tất cả các thành phần, bạn có thể kiểm tra lại bằng cách chạy những lệnh sau trong terminal:</p>
+<ul>
+<li><code>node --version</code></li>
+<li><code>npm --version</code></li>
+<li><code>yo --version</code></li>
+<li><code>docker --version</code></li>
+<li><code>docker-compose --version</code></li>
+</ul>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../first-project/" class="btn btn-neutral float-right" title="First Project">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../architecture/" class="btn btn-neutral" title="Cấu trúc"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../architecture/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../first-project/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+
+</body>
+</html>

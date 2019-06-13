@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>First Project - My Docs</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "First Project";
+    var mkdocs_page_input_path = "first-project.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> My Docs</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">Giới thiệu</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../architecture/">Cấu trúc</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../install/">Cài đặt</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">First Project</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#cai-at-hyperledger-fabric">Cài đặt Hyperledger Fabric</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#buoc-1-cai-at-extension">Bước 1: cài đặt extension</a></li>
+        
+            <li><a class="toctree-l3" href="#buoc-2-generate-smart-contract-project">Bước 2: Generate Smart contract Project</a></li>
+        
+            <li><a class="toctree-l3" href="#buoc-3-chinh-sua-smart-contract">Bước 3: Chỉnh sửa smart contract</a></li>
+        
+            <li><a class="toctree-l3" href="#buoc-4-ong-goi-smart-contract">Bước 4: Đóng gói smart contract</a></li>
+        
+            <li><a class="toctree-l3" href="#buoc-5-cai-at-smart-contract">Bước 5: Cài đặt smart contract</a></li>
+        
+            <li><a class="toctree-l3" href="#buoc-6-khoi-chay-smart-contract">Bước 6: Khởi chạy smart contract</a></li>
+        
+            <li><a class="toctree-l3" href="#buoc-7-export-connection-details">Bước 7: Export connection details</a></li>
+        
+            <li><a class="toctree-l3" href="#buoc-8-submit-transaction">Bước 8: Submit transaction</a></li>
+        
+            <li><a class="toctree-l3" href="#buoc-9-cap-nhat-smart-contract">Bước 9: Cập nhật smart contract</a></li>
+        
+            <li><a class="toctree-l3" href="#buoc-10-submit-them-transaction">Bước 10: Submit thêm transaction</a></li>
+        
+            <li><a class="toctree-l3" href="#buoc-11-truy-van-vao-so-cai">Bước 11: Truy vấn vào sổ cái</a></li>
+        
+            <li><a class="toctree-l3" href="#buoc-12-test-the-contract">Bước 12: Test the contract</a></li>
+        
+            <li><a class="toctree-l3" href="#tong-ket">Tổng kết</a></li>
+        
+        </ul>
+    
+
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">My Docs</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>First Project</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="cai-at-hyperledger-fabric">Cài đặt Hyperledger Fabric</h1>
+<p>Bạn có thể xem hướng dẫn gốc <a href="https://developer.ibm.com/tutorials/ibm-blockchain-platform-vscode-smart-contract/">tại đây</a></p>
+<h2 id="buoc-1-cai-at-extension">Bước 1: cài đặt extension</h2>
+<p><img alt="Install extension" src="../images/installExtension.gif" /></p>
+<p>Đầu tiên, hãy chắc chắn bạn đang ở phiên bản Visual Code mới nhất, sau đó mở phần Extensions ở sidebar bên trái, bạn cũng có thể mở Extensions bằng phím tắt <strong>Ctrl + Shif + X</strong>.</p>
+<p>Tìm kiếm extension <strong>IBM Blockchain Platform</strong> sau đó nhấn nút install để tiến hành cài đặt.</p>
+<h2 id="buoc-2-generate-smart-contract-project">Bước 2: Generate Smart contract Project</h2>
+<p><img alt="Generate Project" src="../images/createSmartContract.gif" /></p>
+<ol>
+<li>Mở cửa sổ gọi lệnh bằng phím tắt <strong>Ctrl + Shif + P</strong>, chọn <strong>IBM Blockchain Platform: Create Smart Contract Project</strong> từ khung gọi lệnh, bạn cũng có thể gõ trực tiếp IBM Blockchain... vào khung gọi lệnh để tìm kiếm nhanh các command.</li>
+<li>Một cửa sổ tùy chọn hiện lện, ở đây tôi chọn Javascript là ngôn ngữ viết Smart Contract trong Project. Bạn có thể chọn Typescript nếu muốn. Tại thời điểm viết hướng dẫn này, IBM Blockchain Platform chỉ mới hỗ trợ Javascript và Typescript mà thôi.</li>
+<li>Tại của sổ tiếp theo, bạn sẽ được hỏi về nơi lưu project, chọn <strong>New Folder</strong> để tạo thư mục mới hoặc chọn 1 thư mục có sẵn.</li>
+<li>Cuối cùng, chọn <strong>Add to workspace</strong> để thêm project vào workspace hiện tại</li>
+</ol>
+<h2 id="buoc-3-chinh-sua-smart-contract">Bước 3: Chỉnh sửa smart contract</h2>
+<p><img alt="Modifie smart contract" src="../images/addChaincode.gif" /></p>
+<p>Mở file lib/my-contract.js, đây là file chứa nội dung smart contract đã tạo sẵn, chúng ta sẽ chỉnh sửa file này. Hãy thay đổi nội dung file lib/my-contract.js bằng đoạn code dưới đây:</p>
+<pre><code class="javascript">'use strict';
+
+const { Contract } = require('fabric-contract-api');
+
+class MyContract extends Contract {
+
+  //update ledger with a greeting to show that the function was called
+  async instantiate(ctx) {
+    let greeting = { text: 'Instantiate was called!' };
+    await ctx.stub.putState('GREETING', Buffer.from(JSON.stringify(greeting)));
+  }
+
+  //take argument and create a greeting object to be updated to the ledger
+  async transaction1(ctx, arg1) {
+    console.info('transaction1', arg1);
+    let greeting = { text: arg1 };
+    await ctx.stub.putState('GREETING', Buffer.from(JSON.stringify(greeting)));
+    return JSON.stringify(greeting);
+  }
+
+}
+
+module.exports = MyContract;
+</code></pre>
+
+<p>Ok, trong đoạn code trên có 2 functions chính:</p>
+<ul>
+<li><strong>instantiate</strong> tạo 1 greeting object và lưu nó vào sổ cái với key GREETING</li>
+<li><strong>transaction1</strong> nhận vào 2 tham số, ctx là 1 Hyperledger Fabric context, trong khi arg1 là nội dung của greeting object do người dùng nhập vào.</li>
+</ul>
+<p>Phương thức ctx.stub.putState được dùng để ghi greeting object lên sổ cái.</p>
+<h2 id="buoc-4-ong-goi-smart-contract">Bước 4: Đóng gói smart contract</h2>
+<p><img alt="Package the smart contract" src="../images/packageSmartContract.gif" /></p>
+<p>Ở bước 3 bạn đã biết cách viết 1 smart contract đơn giản và các hàm cơ bản của nó, giờ hãy đóng gói và cài đặt lên peer.</p>
+<ol>
+<li>Mở của sổ gọi lệnh bằng phím tắt <strong>Ctrl + Shif + P</strong>, chọn <strong>IBM Blockchain Platform: Package a Smart Contract</strong></li>
+<li>Sau khi smart contract đã đóng gói thành công, mở <strong>IBM Blockchain Platform views</strong> ở Activity Bar (bên trái). Bạn sẽ thấy <code>demoContract@0.0.1</code></li>
+</ol>
+<h2 id="buoc-5-cai-at-smart-contract">Bước 5: Cài đặt smart contract</h2>
+<p><img alt="Install Smartcontract" src="../images/install3rd.gif" /></p>
+<p>Ok bạn đã đóng gói thành công smart contract đầu tiên, giờ hãy cài đặt nó nào!</p>
+<p>IBM Blockchain Platform đã cài đặt sẵn 1 network dùng làm môi trường phát triển, hàng chính chủ xịn xò nên yên tâm dùng nhé. Ngoài network có sẵn, extension cũng start sẵn một số docker container với các quyền khác nhau: Orderer, Certificate Authority, CouchDB, và Peer.</p>
+<ol>
+<li>
+<p>Giờ hãy mở IMB Blockchain Platform view từ Activity Bar, bạn sẽ thấy <strong>LOCAL FABRIC OPS</strong>, click vào biểu tượng 3 chấm và chọn <strong>Start Fabric Runtime</strong>.</p>
+<p>Extension sẽ cung cấp các docker containers đóng vai trò như các node trong mạng. Khi việc khởi chạy hoàn tất, bạn sẽ thấy <strong>Smart Contract</strong> bên dưới <strong>LOCAL FABRIC OPS</strong>.
+2. Bên dưới tab <strong>Smart Contract</strong>, chọn <strong>+ Install</strong>
+3. Extension sẽ hỏi bạn muốn cài đặt smart contract lên peer nào? Hãy chọn <strong>peer0.org1.example.com</strong>
+4. Extension sẽ hỏi bạn muốn cài đặt package nào? Hãy chọn <code>demoContract@0.0.1</code>.
+5. Quá trình cài đặt diễn ra hoàn tất, bạn sẽ thấy thông báo <strong>Successfully installed on peer peer0.org1.example.com</strong></p>
+</li>
+</ol>
+<h2 id="buoc-6-khoi-chay-smart-contract">Bước 6: Khởi chạy smart contract</h2>
+<p><img alt="Instantiate Smart Contract" src="../images/instantiate3rd.gif" /></p>
+<p>Bạn đã học cách khởi tạo smart contract, đóng gói và cài đặt nó lên 1 peer, bây giờ hãy thử chạy nó.</p>
+<ol>
+<li>Bên dưới tab <strong>Smart Contract</strong>, bạn sẽ thấy tab <strong>Instantiated</strong>, click vào <strong>+ Instantiate</strong></li>
+<li>Extension sẽ hỏi bạn khởi chạy smart contract trên channel nào?  hãy chọn <strong>mychannel</strong>.</li>
+<li>Extension sẽ hỏi bạn muốn chạy smart contract và version nào? Hãy chọn <code>demoContract@0.0.1</code>.</li>
+<li>Extension sẽ hỏi bạn muốn chạy function nào? gõ vào <strong>instantiate</strong> (bạn nhớ 1 trong 2 functions ở smart contract chứ?)</li>
+<li>Vì function <strong>instantiate</strong> không nhận vào tham số nào, nên ở cửa sổ tiếp theo, hãy để trống và nhấn enter.</li>
+<li>Sau khi khởi chạy hoàn tất, bạn sẽ thấy kết quả ở góc dưới bên phải :)</li>
+</ol>
+<h2 id="buoc-7-export-connection-details">Bước 7: Export connection details</h2>
+<p><img alt="Export connection detail" src="../images/exportProfile3rd.gif" /></p>
+<p>Ở bước này chúng ta sẽ học cách export thông tin truy cập của mạng ra 1 ứng dụng bên ngoài.
+1. Trước hết hãy clone project mẫu từ github sau, chúng ta sẽ export thông tin truy cập ra project này để dùng trong các bước sau:</p>
+<pre><code>git clone https://github.com/horeaporutiu/VSCodeTutorialBlockchain.git
+</code></pre>
+<ol>
+<li>Thêm project vừa clone vào workspace bằng cách chuột phải vào <strong>explore views</strong> và chọn <strong>Add folder to workspace</strong>, tìm đến folder vừa clone về và chọn nó.</li>
+<li>Click vào <strong>IMB Blockchain Platform views</strong></li>
+<li>Dưới tab <strong>LOCAL FABRIC OPS</strong>, click vào <strong>Nodes</strong>, click chuột phải vào <strong>peer0.org1.example.com</strong> node, chọn <strong>Export Connection Details</strong></li>
+<li>Extension sẽ hỏi muốn lưu connection profile vào đâu? Hãy chọn folder <strong>VSCodeTutorialBlockchain</strong></li>
+<li>
+<p>Đợi extension export connection profile, bạn sẽ nhận được thông báo như sau nếu việc export thành công</p>
+<p><code>Successfully exported connection details to 
+/Users/Horea.Porutiu@ibm.com/Workdir/VSCodeTutorialBlockchain/local_fabric</code></p>
+</li>
+</ol>
+<h2 id="buoc-8-submit-transaction">Bước 8: Submit transaction</h2>
+<p><img alt="submit transaction" src="../images/invoke3rd.gif" /></p>
+<p>Ở bước này, chúng ta sẽ học cách truy vấn vào mạng thông qua submit transaction bằng extension.</p>
+<ol>
+<li>Bên dưới tab <strong>LOCAL FABRIC OPS</strong>, bạn sẽ thấy 1 khu vực gọi là <strong>FABRIC GATEWAY</strong></li>
+<li>Click vào <strong>local_fabric</strong>, sau đ1o click vào <strong>Admin@org1.example.com</strong></li>
+<li>Bạn sẽ thấy thông báo <strong>Connecting to local_fabric</strong></li>
+<li>Ok, dưới tab <strong>Channels</strong> trong <strong>FABRIC GATEWAY</strong>, bạn sẽ thấy <strong>mychannel</strong>, bấm vào phần mở rộng, bạn sẽ thấy <strong>demoContract@0.0.1</strong> và 2 function bên trong nó là <strong>instantiate</strong> và <strong>transaction1</strong></li>
+<li>Bấm chuột phải vào <strong>transaction1</strong> và click <strong>Submit transaction</strong>, ở phần nhập tham số, hãy nhập bất kỳ, ở đây mình nhập "hello".</li>
+</ol>
+<p>Vậy là xong, bạn đã submit 1 transaction lên mạng Fabric và cập nhật sổ cái.</p>
+<h2 id="buoc-9-cap-nhat-smart-contract">Bước 9: Cập nhật smart contract</h2>
+<p><img alt="Upgrade" src="../images/upgrade3rd.gif" /></p>
+<p>Chúng ta đã học cách tạo smart contract, cài đặt và truy vấn. Ở bước này chúng ta sẽ học cách update 1 smart contract có sẵn. Chúng ta cũng đã biết cách thêm dữ liệu vào sổ cái thông qua <em>ctx.stub.putState</em>, giờ chúng ta sẽ học cách lấy dữ liệu ra thông qua <em>ctx.stub.getState</em> API.</p>
+<ol>
+<li>Cập nhật file my-contract.js, thay thế nội dung file my-contract.js bằng đoạn code sau:</li>
+</ol>
+<pre><code class="javascript">
+'use strict';
+
+const { Contract } = require('fabric-contract-api');
+class MyContract extends Contract {
+//update ledger with a greeting 
+async instantiate(ctx) {
+let greeting = { text: 'Instantiate was called!' };
+    await ctx.stub.putState('GREETING', Buffer.from(JSON.stringify(greeting)));
+}
+//add a member along with their email, name, address, and number
+async addMember(ctx, email, name, address, phoneNumber) {
+let member = {
+    name: name,
+    address: address,
+    number: phoneNumber,
+    email: email
+};
+await ctx.stub.putState(email, Buffer.from(JSON.stringify(member)));
+    return JSON.stringify(member);
+}
+// look up data by key
+async query(ctx, key) {
+    console.info('querying for key: ' + key  );
+    let returnAsBytes = await ctx.stub.getState(key);
+    let result = JSON.parse(returnAsBytes);
+        return JSON.stringify(result);
+    }
+}
+module.exports = MyContract;
+</code></pre>
+
+<ul>
+<li><code>addMember</code>: thêm dữ liệu vào ledger thông qua các tham số như email name, address, phoneNumber</li>
+<li>
+<p>query: truy vấn ledger thông qua key. Trả về  dữ liệu nếu có.</p>
+</li>
+<li>
+<p>Cập nhật lại version trong file <code>package.json</code></p>
+<p><code>"version": "0.0.2",</code></p>
+</li>
+<li>
+<p>Dưới tab <strong>LOCAL FABRIC OPS</strong>, phần <strong>Instantiated</strong>, bạn sẽ thấy <strong>demoContract@0.0.1</strong>, bấm chuột phải vào nó và chọn <strong>Upgrade smart contract</strong></p>
+</li>
+<li>
+<p>Extension sẽ hỏi bạn muốn chọn phiên bản nào để cập nhật, hãy chọn <strong>demoContract</strong></p>
+</li>
+<li>
+<p>Extention sẽ hỏi bạn muốn cài đặt smart contract mới vào peer nào, hãy chọn <strong>peer0.org1.example.com</strong></p>
+</li>
+<li>
+<p>Extension sẽ hỏi bạn muốn gọi function nào, hãy nhập <strong>instantiate</strong></p>
+</li>
+<li>
+<p><code>instantiate</code> không có tham số, vậy nên chúng ta sẽ để trống và nhấn enter. Việc upgrade sẽ diễn ra trong chốc lát, bạn sẽ nhận được thông báo <strong>Successfully upgraded smart contract</strong> khi upgrade hoàn tất.</p>
+</li>
+</ul>
+<h2 id="buoc-10-submit-them-transaction">Bước 10: Submit thêm transaction</h2>
+<p><img alt="submit more transaction" src="../images/addMember3rd.gif" /></p>
+<p>Bạn đã cập nhật xong smart contract, bên dưới khu vực <strong>FABRIC GATEWAY</strong> và tab <strong>Channels</strong>, trong <strong>mychannel</strong> bạn sẽ thấy <strong>demoContract@0.0.2</strong>.</p>
+<ol>
+<li>Trong <strong>demoContract@0.0.2</strong>, bạn sẽ thấy các function <code>instantiate</code>, <code>addMember</code> và <code>query</code></li>
+<li>Chuột phải vào <code>addMember</code> và chọn <strong>Submit Transaction</strong>, nhập thông tin sau vào phần <strong>arguments</strong></li>
+</ol>
+<p><code>ginny@ibm.com, Ginny Rometty, Wall Street NY, 1234567890</code></p>
+<p>Bạn cũng có thể tự nhập vào các tham số của mình, mỗi tham số cách nhau bởi dấu phẩy như trên.</p>
+<p>Hãy add thêm 3 hoặc 4 member nữa để có thể truy vấn ở bước sau.</p>
+<h2 id="buoc-11-truy-van-vao-so-cai">Bước 11: Truy vấn vào sổ cái</h2>
+<p><img alt="query" src="../images/query3rd.gif" /></p>
+<p>Bạn đã hoàn tất ghi dữ liệu vào sổ cái, giờ là lúc xem những thông tin chúng ta đã ghi vào. Chúng ta sẽ dùng thư mục <strong>VSCodeTutorialBlockchain</strong> đã clone trước đó.</p>
+<ol>
+<li>Trong file <strong>query.js</strong>, nội dung của nó hoàn toàn giống với <strong>invoke.js</strong> ngoại trừ dòng sau:</li>
+</ol>
+<pre><code class="javascript">// query.js
+// this function just query the ledger, not update it
+let response = await contract.evaluateTransaction('query', 'GREETING');
+
+// invoke.js
+// this function will update the ledger state
+let response = await contract.submitTransaction('instantiate');
+</code></pre>
+
+<p>Phần quan trọng đây: <code>evaluateTransaction</code> sẽ <strong>không submit transaction vào ordering service</strong>, do đó nó không cập nhật lại dữ liệu trong sổ cái. Trong file <strong>invoke.js</strong>, bạn submit transaction lên ordering service, việc này <strong>ghi dữ liệu vào trong sổ cái</strong>, còn ở <strong>query.js</strong> thì ngược lại, dữ liệu sẽ không được cập nhật vào sổ cái.</p>
+<ol>
+<li>Dùng terminal có sẵn trong VS code hoặc bất kỳ trình terminal khác, cd vào thư mục <strong>VSCodeTutorialBlockchain</strong>, cài đặt những dependencies cần thiết bằng lệnh sau:</li>
+</ol>
+<pre><code>    VSCodeTutorialBlockchain$ npm install
+</code></pre>
+
+<ol>
+<li>Sau khi hoàn tất việc cài đặt các dependencies cần thiết, chúng ta sẽ chạy thử file query.js</li>
+</ol>
+<pre><code>    VSCodeTutorialBlockchain$ node query.js
+</code></pre>
+
+<p>Output:</p>
+<pre><code>    Connected to Fabric gateway.
+    { text: 'Instantiate was called!' }
+    Disconnect from Fabric gateway.
+    done
+</code></pre>
+
+<p>Bạn nhớ <strong>demoContract@0.0.1</strong> chứ? đây chính là dữ liệu đã ghi vào sổ cái ở version 0.0.1</p>
+<ol>
+<li>OK, giờ hãy thử thay đổi file query.js một chút, từ thế này</li>
+</ol>
+<pre><code class="javascript">let response = await contract.evaluateTransaction('query', 'GREETING');
+</code></pre>
+
+<p>thành thế này:</p>
+<pre><code class="javascript">let response = await contract.evaluateTransaction('query', 'ginny@ibm.com');
+</code></pre>
+
+<p>Bạn có đoán được ý nghĩa của đoạn code này không?</p>
+<p>Kết quả sẽ ra thế này:</p>
+<pre><code>    VSCodeTutorialBlockchain$ node query.js
+    Connected to Fabric gateway.
+    {&quot;address&quot;:&quot; Wall Street NY&quot;,&quot;email&quot;:&quot;ginny@ibm.com&quot;,&quot;name&quot;:&quot; Ginny Rometty&quot;,&quot;number&quot;:&quot; 1234567890&quot;}
+    Disconnect from Fabric gateway.
+    done
+</code></pre>
+
+<ol>
+<li>Thử thay đổi nội dung request thành email nào đó bạn đã nhập ở bước trên, lets try and see the magic!</li>
+</ol>
+<h2 id="buoc-12-test-the-contract">Bước 12: Test the contract</h2>
+<p><img alt="Run test" src="../images/runTest3rd.gif" /></p>
+<p>Chúng ta cũng có thể test smart contract ngay trong IBM Blockchain Platform extension. Bấm vào icon IBM Blockchain Platform ở bên trái.</p>
+<ol>
+<li>Dưới khu vực <strong>FABRIC GATEWAY</strong>, trong tab <strong>Channels</strong>, bạn sẽ thấy <strong>mychannel</strong>, click vào smart contract mới nhất <code>demoContract@0.0.2</code> và chọn <strong>Generate Smart Contract Tests</strong>.</li>
+<li>Chọn ngôn ngữ để generate test, ở đây mình chọn Javascript.</li>
+<li>Khi hoàn tất, bạn có thể chạy npm test từ thư mục <strong>demoContract</strong>, hoặc click vào <strong>run test</strong> button từ <strong>VSCode UI</strong> như gif.</li>
+</ol>
+<h2 id="tong-ket">Tổng kết</h2>
+<p>Done, chúng ta đã học được cách tạo, đóng gói, cài đặt smart contract lên mạng Fabric, khởi tạo và gọi Smart contract function bằng Hyperledger API. Từ giờ bạn có thể modify file my-contract.js và tạo ra smart contract riêng của mình.</p>
+<p>Mình có tạo 1 smart contract sample từ tutorial này <a href="https://github.com/1212087/fabric-sample">tại đây</a>, bạn có thể chạy nó sau khi hoàn tất tutorial này.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="../install/" class="btn btn-neutral" title="Cài đặt"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../install/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+
+</body>
+</html>

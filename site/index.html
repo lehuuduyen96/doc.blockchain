@@ -7,24 +7,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="None">
   
-  <link rel="shortcut icon" href="./img/favicon.ico">
-  <title>Home - MkLorum</title>
+  <link rel="shortcut icon" href="img/favicon.ico">
+  <title>Giới thiệu - My Docs</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
-  <link rel="stylesheet" href="./css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="./css/theme_extra.css" type="text/css" />
-  <link rel="stylesheet" href="./css/highlight.css">
+  <link rel="stylesheet" href="css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Home";
+    var mkdocs_page_name = "Gi\u1edbi thi\u1ec7u";
     var mkdocs_page_input_path = "index.md";
-    var mkdocs_page_url = "/";
+    var mkdocs_page_url = null;
   </script>
   
-  <script src="./js/jquery-2.1.1.min.js"></script>
-  <script src="./js/modernizr-2.8.3.min.js"></script>
-  <script type="text/javascript" src="./js/highlight.pack.js"></script> 
+  <script src="js/jquery-2.1.1.min.js" defer></script>
+  <script src="js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
   
 </head>
 
@@ -35,10 +36,10 @@
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
       <div class="wy-side-nav-search">
-        <a href="." class="icon icon-home"> MkLorum</a>
+        <a href="." class="icon icon-home"> My Docs</a>
         <div role="search">
   <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
   </form>
 </div>
       </div>
@@ -49,19 +50,38 @@
           
             <li class="toctree-l1 current">
 		
-    <a class="current" href=".">Home</a>
+    <a class="current" href=".">Giới thiệu</a>
     <ul class="subnav">
             
-    <li class="toctree-l2"><a href="#chao-mung-en-blockchain">Chào mừng đến Blockchain</a></li>
+    <li class="toctree-l2"><a href="#welcome-to-hyperledger">Welcome to Hyperledger</a></li>
     
         <ul>
         
-            <li><a class="toctree-l3" href="#cai-at">Cài đặt</a></li>
+            <li><a class="toctree-l3" href="#hyperledger-la-gi">Hyperledger là gì?</a></li>
+        
+            <li><a class="toctree-l3" href="#cac-du-an-cua-hyperledger">Các dự án của Hyperledger</a></li>
+        
+            <li><a class="toctree-l3" href="#uu-iem-cua-hyperledger">Ưu điểm của Hyperledger</a></li>
         
         </ul>
     
 
     </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="architecture/">Cấu trúc</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="install/">Cài đặt</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="first-project/">First Project</a>
 	    </li>
           
         </ul>
@@ -74,7 +94,7 @@
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href=".">MkLorum</a>
+        <a href=".">My Docs</a>
       </nav>
 
       
@@ -86,7 +106,7 @@
     
       
     
-    <li>Home</li>
+    <li>Giới thiệu</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -96,30 +116,41 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="chao-mung-en-blockchain">Chào mừng đến Blockchain</h1>
-<p>Sau đây là các bước cái đặt cho mạng blockchain </p>
-<h2 id="cai-at">Cài đặt</h2>
-<ul>
-<li><code>git clone https://github.com/1212087/blockchain-python-tutorial</code> - Kéo dự án từ git.</li>
-<li><code>mkdir server/chaindata</code> - Tạo folder chaindata.</li>
-<li><code>mkdir transaction/transaction_wait</code> - Tạo folder transaciton_wait.</li>
-<li><code>pip install flask</code> - Cài đặt thư viện flask .</li>
-<li><code>pip install flask_cors</code> - Cài đặt thư viện flask_cors. </li>
-<li><code>pip install pycryptodome</code> - Cài đặt thư viện pycryptodome.</li>
-<li><code>pip install base58</code> - Cài đặt thư viện base58.</li>
-<li>
-<p><code>pip install apscheduler</code> - Cài đặt thư viện apscheduler.
- Project layout</p>
-<p>mkdocs.yml    # The configuration file.
-docs/
-    index.md  # The documentation homepage.
-    ...       # Other markdown pages, images and other files.</p>
-</li>
-</ul>
+                <h1 id="welcome-to-hyperledger">Welcome to Hyperledger</h1>
+<h2 id="hyperledger-la-gi">Hyperledger là gì?</h2>
+<p><strong>Hyperledger (hoặc dự án Hyperledger)</strong> là dự án mã nguồn mở được tạo ra để thúc đẩy công nghệ blockchain xuyên suốt ngành công nghiệp. Được ra đời vào tháng 12/2015 bởi Linux Foundation và được hỗ trợ bởi các công ty lớn như IBM, Intel và SAP giúp phát triển cộng tác của sổ cái phân tán dựa trên blockchain.</p>
+<p>Hyperledger là một sự hợp tác toàn cầu của các nhà lãnh đạo trong ngân hàng, tài chính, Internet of Things, sản xuất, chuỗi cung ứng, và công nghệ. Nhằm tạo ra các khung blockchain sổ kế toán mở và tiêu chuẩn hóa và các cơ sở mã để tạo ra kết quả kinh doanh hữu hình.</p>
+<p><strong>Linux Foundation</strong> là một tổ chức phi lợi nhuận cho phép đổi mới hàng loạt thông qua mã nguồn mở, lưu trữ Hyperledger. Linux Foundation cũng cho phép cộng đồng các nhà phát triển trên toàn thế giới làm việc cùng nhau và chia sẻ ý tưởng, cơ sở hạ tầng và mã code.</p>
+<h2 id="cac-du-an-cua-hyperledger">Các dự án của Hyperledger</h2>
+<h3 id="hyperledger-sawtooth">Hyperledger Sawtooth</h3>
+<p>Hyperledger Sawtooth là một bộ khối chuỗi mô-đun được phát triển bởi Intel, sử dụng thuật toán đồng thuận mới có tên là Proof of Elapsed Time (PoeT).Nhằm mục tiêu xác nhận các quần thể phân phối lớn với mức tiêu thụ tài nguyên tối thiểu để xây dựng, triển khai và chạy các sổ cái được phân phối. Sawtooth hỗ trợ các hợp đồng thông minh Ethereum thông qua “seth” (một bộ xử lý giao dịch Sawtooth tích hợp EVW Hyperledger Burrow). Ngoài hỗ trợ Solidity, Sawtooth bao gồm các SDK cho Python, Go, Javascript, Rust, Java và C ++.</p>
+<h3 id="hyperledger-fabric">Hyperledger Fabric</h3>
+<p>Hyperledger Fabric là một cơ sở hạ tầng blockchain được phép, ban đầu được đóng góp bởi IBM và Digital Asset, cung cấp kiến ​​trúc mô đun với phân định vai trò giữa các nút trong cơ sở hạ tầng, thực hiện Hợp đồng thông minh (gọi là “chaincode” trong Fabric) và sự đồng thuận có thể cấu hình và dịch vụ thành viên. Mạng lưới Fabric bao gồm “Nút ngang hàng”, thực thi mã chuỗi, dữ liệu sổ kế toán truy cập, xác nhận giao dịch và giao diện với các ứng dụng. “Các nút của trình đặt hàng” đảm bảo tính nhất quán của blockchain và phân phối các giao dịch được xác nhận cho các đồng nghiệp của mạng và dịch vụ MSP, thường được thực hiện dưới dạng Cơ quan cấp chứng chỉ, quản lý chứng chỉ X.509 được sử dụng để xác thực danh tính và vai trò của thành viên.</p>
+<p>Fabric chủ yếu dùng để tích hợp các dự án, trong đó yêu cầu Công nghệ Ledger phân tán (DLT), không cung cấp dịch vụ nào cho người dùng ngoài SDK cho Node.js, Java và Go (thông qua Hyperledger Composer, hoặc nguyên bản từ v1.1) out-of-the-box. Do đó, nó có khả năng linh hoạt hơn các đối thủ cạnh tranh chỉ hỗ trợ một ngôn ngữ hợp đồng thông minh đã đóng.</p>
+<h3 id="hyperledger-iroha">Hyperledger Iroha</h3>
+<p>Hyperledger Iroha bắt nguồn từ một số nhà phát triển ở Nhật Bản đã xây dựng công nghệ blockchain của riêng họ cho một vài trường hợp sử dụng di động. Behlendorf cho biết: “Iroha được thực hiện bằng C ++, có thể có hiệu suất cao hơn đối với dữ liệu nhỏ và các trường hợp sử dụng tập trung”.  Được phát triển bởi Soramitsu, Iroha phân phối theo mô đun dễ sử dụng với các thuật toán dịch vụ đặt hàng và đồng thuận độc đáo của riêng mình, mô hình quyền dựa trên vai trò phong phú và hỗ trợ đa chữ ký.</p>
+<h3 id="hyperledger-burrow">Hyperledger Burrow</h3>
+<p>Hyperledger Burrow được phát hành vào tháng 12/ 2014, Burrow cung cấp một máy khách blockchain kiểu mô-đun với một thông dịch viên hợp đồng thông minh được phép được xây dựng một phần cho đặc tả của Ethereum Virtual Machine (EVM). Burrow được hỗ trợ bởi Monax và Intel và được viết bằng ngôn ngữ lập trình Solidity.</p>
+<h3 id="hyperledger-indy">Hyperledger Indy</h3>
+<p>Hyperledger Indy là một sổ kế toán phân tán, được xây dựng theo mục đích cho bản sắc phi tập trung. Nó cung cấp các công cụ, thư viện và các thành phần tái sử dụng để tạo và sử dụng các nhận dạng kỹ thuật số độc lập bắt nguồn từ các blockchain hoặc các sổ cái khác được phân phối cho khả năng tương tác, hỗ trợ danh tính độc lập trên sổ cái phân tán. Indy được phát triển bởi Sovrin Foundation. Trong bản Experian hack, Behlendorf cho biết phần mềm blockchain của Indy dựa trên việc giảm thiểu dữ liệu. Các công ty không phải lưu trữ nhiều dữ liệu cá nhân. Họ có thể lưu một con trỏ vào danh tính.</p>
+<h2 id="uu-iem-cua-hyperledger">Ưu điểm của Hyperledger</h2>
+<h3 id="tinh-an-danh">Tính ẩn danh</h3>
+<p>Các transaction trên hyperledger đều được lưu trên các chanel (kênh) riêng biệt mà chỉ những người tham gia vào kênh đó mới có thể xem và sử dụng các giao dịch trên kênh.</p>
+<h3 id="mang-cap-phep">Mạng cấp phép</h3>
+<p>Mạng Hyperledger được thiết lập giữa những người tham gia hữu danh (các tổ chức, doanh ngiệp) chứ không phải là người dùng ẩn danh như trên mạng Ethereum hoặc Bitcoin. Hyperledger thiết lập sự tin cậy phi tập trung giữa các người dùng hữu danh dựa trên công nghệ Blockchain</p>
+<h3 id="de-dang-bat-au-chua-chinh-xac">Dễ dàng bắt đầu (chưa chính xác)</h3>
+<p>Không giống như các mạng lưới Blockchain khác sử dụng ngôn ngữ riêng của chúng để viết smart contract, mạng Hyperledger cho phép viết smart contract bằng các ngôn ngữ quen thuộc như Golang, Nodejs và Java.</p>
               
             </div>
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="architecture/" class="btn btn-neutral float-right" title="Cấu trúc">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+    </div>
   
 
   <hr/>
@@ -131,12 +162,12 @@ docs/
 
   Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
 </footer>
-	  
+      
         </div>
       </div>
 
     </section>
-    
+
   </div>
 
   <div class="rst-versions" role="note" style="cursor: pointer">
@@ -144,14 +175,18 @@ docs/
       
       
       
+        <span style="margin-left: 15px"><a href="architecture/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
     </span>
 </div>
-    <script src="./js/theme.js"></script>
+    <script>var base_url = '.';</script>
+    <script src="js/theme.js" defer></script>
+      <script src="search/main.js" defer></script>
 
 </body>
 </html>
 
 <!--
-MkDocs version : 0.16.3
-Build Date UTC : 2019-06-13 04:39:52
+MkDocs version : 1.0.4
+Build Date UTC : 2019-03-21 09:04:22
 -->
