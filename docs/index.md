@@ -12,9 +12,3 @@ Sau đây là các bước cái đặt cho mạng blockchain
 * `pip install pycryptodome` - Cài đặt thư viện pycryptodome.
 * `pip install base58` - Cài đặt thư viện base58.
 * `pip install apscheduler` - Cài đặt thư viện apscheduler.
- Project layout
-
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
