@@ -1,5 +1,5 @@
 site_name: MkLorum
 nav:
     - Giới thiệu: index.md
-    - About: about.md
+    - Transaction: transaction.md
 theme: readthedocs
