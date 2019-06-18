@@ -13,6 +13,18 @@ Sau đây là các bước cái đặt cho mạng blockchain
 * `pip install base58` - Cài đặt thư viện base58.
 * `pip install apscheduler` - Cài đặt thư viện apscheduler.
 
+
+
+## Run
+* `cd server` - Vào thư mục server.
+* `python run.py` - Start server.
+* `http://127.0.0.1:5000/` - Đường dẫn kết nối trang list mine.
+* `http://127.0.0.1:5000/configure` - Đường dẫn kết nối trang add note .
+* `http://127.0.0.1:5000/transaction` - Đường dẫn kết nối trang generate wallet .
+* `http://127.0.0.1:5000/make/transaction` - Đường dẫn kết nối trang generate transaction .
+
+	
+
 ## Transaction
 Transaction là giao dịch chuyển đổi từ bên A sang bên B , Giao dịch có thể bao gồm contract, chữ ký, tiền ảo.
  
